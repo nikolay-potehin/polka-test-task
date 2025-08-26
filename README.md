@@ -86,7 +86,7 @@ enum MasterType {
 
 ### 1. Клонирование репозитория
 ```bash
-git clone <repository-url>
+git clone https://github.com/nikolay-potehin/polka-test-task.git
 cd polka_test_task
 ```
 
@@ -97,7 +97,7 @@ flutter pub get
 
 ### 3. Генерация кода
 ```bash
-flutter packages pub run build_runner build
+flutter pub run build_runner build -d
 ```
 
 ### 4. Запуск приложения
@@ -107,15 +107,10 @@ flutter run
 
 ## Скриншоты
 
-### Карта мастеров с маркерами
-![Карта мастеров](screenshots/map.png)
-
-### Фильтрация по типу услуг
-![Фильтрация](screenshots/filters.png)
-
-### Карточка мастера
-![Карточка мастера](screenshots/master.png)
-
-## Автор
+<p align="center">
+  <img src="screenshots/map.png" width="30%" />
+  <img src="screenshots/filters.png" width="30%" />
+  <img src="screenshots/master.png" width="30%" />
+</p>
 
 Разработано в рамках тестового задания для демонстрации навыков работы с Flutter.
