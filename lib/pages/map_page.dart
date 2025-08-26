@@ -4,6 +4,7 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:polka_test_task/blocs/cubit/masters_cubit.dart';
 import 'package:polka_test_task/core/colors.dart';
+import 'package:polka_test_task/core/geoposition.dart';
 import 'package:polka_test_task/widgets/dropdown_master_picker.dart';
 
 class MapPage extends StatefulWidget {
@@ -40,6 +41,18 @@ class _MapPageState extends State<MapPage> {
             onValuePicked: (type) => context.read<MastersCubit>().setFilter(type),
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          try {
+            final position = await getUserLocation();
+            controller.move(position, controller.camera.zoom + 1);
+          } catch (e) {
+            print('Caught error trying to get user position: $e');
+          }
+        },
+        backgroundColor: AppColors.primary,
+        child: Icon(Icons.location_on, color: Colors.white),
       ),
       body: FlutterMap(
         mapController: controller,
