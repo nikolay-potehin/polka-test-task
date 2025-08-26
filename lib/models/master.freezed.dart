@@ -212,8 +212,8 @@ return $default(_that.lat,_that.long,_that.name,_that.description,_that.type);ca
 /// @nodoc
 @JsonSerializable()
 
-class _Master implements Master {
-  const _Master({required this.lat, required this.long, required this.name, required this.description, required this.type});
+class _Master extends Master {
+  const _Master({required this.lat, required this.long, required this.name, required this.description, required this.type}): super._();
   factory _Master.fromJson(Map<String, dynamic> json) => _$MasterFromJson(json);
 
 @override final  double lat;
