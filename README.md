@@ -87,7 +87,7 @@ enum MasterType {
 ### 1. Клонирование репозитория
 ```bash
 git clone https://github.com/nikolay-potehin/polka-test-task.git
-cd polka_test_task
+cd polka-test-task
 ```
 
 ### 2. Установка зависимостей
@@ -97,7 +97,7 @@ flutter pub get
 
 ### 3. Генерация кода
 ```bash
-flutter pub run build_runner build -d
+dart run build_runner build -d
 ```
 
 ### 4. Запуск приложения
